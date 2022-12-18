@@ -1,0 +1,22 @@
+
+;<Program title>
+
+JMP START
+
+;data
+
+
+;code
+START: NOP
+MVI C,00H
+LXI H,2000H
+MOV A,M
+INX H
+ADD M
+JNC SKIP
+INR C
+SKIP: INX H
+MOV M,A
+INX H
+MOV M,C
+HLT
