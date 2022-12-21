@@ -1,15 +1,10 @@
-
-;<Program title>
-
-jmp start
-
-;data
-
-
-;code
-start: nop
-MVI A,05H
-MVI B,03H
-SUB B
-STA 6000H
-hlt
+MVI B,0AH
+LXI H,9500H
+LXI D,9600H
+NEXT: MOV A,M
+STAX D
+INX H
+INX D
+DCR B
+JNZ NEXT 
+HLT
